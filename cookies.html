@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Cookies Policy - Healthy &amp; Organic Recipe Vibes</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+<style>
+  /* Base and reset */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #fcf8f1;
+    color: #4a4237;
+    line-height: 1.65;
+    font-size: 18px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  h1, h2, h3, h4 {
+    color: #6a533b;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-top: 0;
+  }
+  h1 {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1.5px;
+  }
+  h2 {
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+    margin-top: 2.5rem;
+  }
+  h3 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    margin-top: 1.8rem;
+  }
+  p {
+    margin-bottom: 1.25rem;
+    color: #5b4f3c;
+    max-width: 900px;
+  }
+  strong {
+    color: #704214;
+  }
+  ul {
+    padding-left: 1.5rem;
+    color: #6b5842;
+    margin-bottom: 1.25rem;
+  }
+  ul li {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+  }
+  /* Container */
+  .container {
+    max-width: 1100px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 2rem 0 6rem 0;
+    flex-grow: 1;
+  }
+  /* Header */
+  header {
+    background: #efe5d6;
+    text-align: center;
+    padding: 2.5rem 1rem 3rem;
+    box-shadow: 0 2px 6px rgba(106,83,59, 0.15);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  header h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    color: #845c36;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+  }
+  /* Sections */
+  section {
+    margin-bottom: 3.5rem;
+  }
+  /* Footer */
+  footer {
+    background: #efe5d6;
+    color: #6a533b;
+    padding: 2rem 1rem;
+    text-align: center;
+    font-size: 0.95rem;
+    border-top: 1px solid #d6c9b8;
+  }
+  footer .contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+  }
+  footer .contact-info div {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: #7a6344;
+  }
+  .material-icons {
+    font-size: 20px;
+    color: #a37d43;
+  }
+  /* Cookie Consent Dialog Styles */
+  #cookie-consent {
+    position: fixed;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #efe5d6;
+    border: 2px solid #a37d43;
+    border-radius: 14px;
+    box-shadow: 0 8px 22px rgba(139, 92, 54, 0.25);
+    padding: 1.6rem 2rem;
+    max-width: 600px;
+    width: 90%;
+    z-index: 11000;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  #cookie-consent p {
+    margin: 0;
+    font-size: 1rem;
+    color: #5b4f3c;
+  }
+  #cookie-consent .buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+  }
+  #cookie-consent button {
+    background-color: #a37d43;
+    border: none;
+    color: white;
+    font-weight: 600;
+    padding: 10px 24px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  #cookie-consent button:hover,
+  #cookie-consent button:focus {
+    background-color: #744f23;
+    outline: none;
+  }
+  #cookie-consent button#decline {
+    background-color: #705a49;
+  }
+  #cookie-consent button#decline:hover,
+  #cookie-consent button#decline:focus {
+    background-color: #503f33;
+  }
+  /* Responsive */
+  @media (max-width: 900px) {
+    p, ul {
+      max-width: 100%;
+    }
+  }
+  @media (max-width: 480px) {
+    body {
+      font-size: 16px;
+    }
+    h1 {
+      font-size: 2.8rem;
+    }
+    h2 {
+      font-size: 1.8rem;
+    }
+    h3 {
+      font-size: 1.4rem;
+    }
+    .material-icons {
+      font-size: 18px;
+    }
+    footer .contact-info {
+      flex-direction: column;
+      gap: 1rem;
+    }
+    #cookie-consent {
+      padding: 1rem 1.5rem;
+      font-size: 0.9rem;
+    }
+    #cookie-consent button {
+      padding: 8px 18px;
+      font-size: 0.9rem;
+    }
+  }
+</style>
+</head>
+<body>
+  <header role="banner">
+    <h1>Cookies Policy</h1>
+  </header>
+
+  <main class="container" role="main">
+    <section aria-labelledby="introduction-title">
+      <h2 id="introduction-title">Introduction</h2>
+      <p>Welcome to <strong>Healthy &amp; Organic Recipe Vibes</strong>. This Cookies Policy explains how we use cookies and similar tracking technologies when you visit or interact with our website. We respect your privacy and are committed to transparency regarding how your information is collected and used.</p>
+      <p>By using our website, you consent to the use of cookies in accordance with this policy. You have the right to accept or decline cookies as explained below and manage your cookie preferences at any time.</p>
+    </section>
+
+    <section aria-labelledby="what-are-cookies-title">
+      <h2 id="what-are-cookies-title">What Are Cookies?</h2>
+      <p>Cookies are small text files stored on your device (computer, mobile phone, or tablet) when you visit a website. They help improve your browsing experience by remembering your preferences and actions over time. Cookies serve various functions, from essential site operation to analytics and advertising.</p>
+      <p>Types of cookies commonly used include:</p>
+      <ul>
+        <li><strong>Session Cookies:</strong> Temporary cookies that expire when you close your browser, enabling basic site functions.</li>
+        <li><strong>Persistent Cookies:</strong> Remain on your device for a set period or until manually deleted, remembering your preferences on return visits.</li>
+        <li><strong>First-Party Cookies:</strong> Set directly by the website you are visiting.</li>
+        <li><strong>Third-Party Cookies:</strong> Set by external services or partners providing additional functionality, such as analytics or advertising.</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="how-we-use-cookies-title">
+      <h2 id="how-we-use-cookies-title">How We Use Cookies</h2>
+      <p>At Healthy &amp; Organic Recipe Vibes, cookies are used to enhance your interaction with our website, including but not limited to:</p>
+      <ul>
+        <li><strong>Essential Cookies:</strong> Necessary for website functionality like security, navigation, and accessibility features.</li>
+        <li><strong>Performance Cookies:</strong> Gather anonymous data about how users engage with our website to help improve design and content.</li>
+        <li><strong>Functional Cookies:</strong> Remember your preferences such as language, region, or display settings for a personalized experience.</li>
+        <li><strong>Advertising and Targeting Cookies:</strong> Used to deliver relevant advertisements and measure effectiveness, often via third-party partners.</li>
+      </ul>
+      <p>These cookies help us maintain a safe, enjoyable, and tailored online environment for our visitors.</p>
+    </section>
+
+    <section aria-labelledby="third-party-cookies-title">
+      <h2 id="third-party-cookies-title">Third-Party Cookies</h2>
+      <p>Our website may include cookies from third-party service providers such as:</p>
+      <ul>
+        <li><strong>Analytics Providers:</strong> Tools like Google Analytics that help us understand site usage and visitor behaviors.</li>
+        <li><strong>Advertising Networks:</strong> Partners who use cookies to display ads tailored to your interests across various websites.</li>
+        <li><strong>Social Media Platforms:</strong> Integrations that enable sharing content or interacting with social networks.</li>
+      </ul>
+      <p>We do not control the placement or use of these cookies by third parties and recommend reviewing their respective privacy and cookie policies for more information.</p>
+    </section>
+
+    <section aria-labelledby="managing-cookies-title">
+      <h2 id="managing-cookies-title">Managing and Disabling Cookies</h2>
+      <p>You have the right to control the use of cookies on your device. Most browsers automatically accept cookies, but you can usually modify your settings to decline or delete cookies if you wish.</p>
+      <p>Common browser options include:</p>
+      <ul>
+        <li><strong>Disabling Cookies:</strong> Prevent websites from storing cookies on your device.</li>
+        <li><strong>Deleting Cookies:</strong> Remove stored cookies manually or set browsers to clear them on exit.</li>
+        <li><strong>Managing Preferences:</strong> Limit cookies to specific sites or choose which categories of cookies to allow.</li>
+      </ul>
+      <p>Please note that disabling certain cookies may affect your user experience, impair site functionality, or prevent access to some services.</p>
+    </section>
+
+    <section aria-labelledby="cookies-consent-title">
+      <h2 id="cookies-consent-title">Cookies Consent</h2>
+      <p>When you first visit our site, you will be presented with a cookie consent banner allowing you to accept or decline non-essential cookies. You can change your preferences at any time using the controls provided.</p>
+      <p>Your choices regarding cookies are respected and recorded to ensure compliance with the applicable laws and to give you control over your data.</p>
+    </section>
+
+    <section aria-labelledby="privacy-policy-title">
+      <h2 id="privacy-policy-title">Relationship to Our Privacy Policy</h2>
+      <p>Our <a href="privacy.html" target="_blank" rel="noopener noreferrer">Privacy Policy</a> provides comprehensive information on how we collect, use, and protect your personal data. Cookies and tracking technologies are part of our overall approach to privacy and data security.</p>
+      <p>We encourage you to read both our Cookie Policy and Privacy Policy to understand fully how your information is handled.</p>
+    </section>
+
+    <section aria-labelledby="updates-title">
+      <h2 id="updates-title">Updates to This Cookies Policy</h2>
+      <p>We may update this Cookies Policy from time to time to reflect changes in law, technology, or our business practices. Updates will be posted on this page with the date of the last revision indicated.</p>
+      <p>We recommend reviewing this policy periodically to stay informed about the cookies we use and your choices.</p>
+    </section>
+
+    <section aria-labelledby="contact-title">
+      <h2 id="contact-title">Contact Information</h2>
+      <p>If you have questions or concerns about our use of cookies or this policy, please contact us at:</p>
+      <ul>
+        <li><strong>Address:</strong> 711 E Northern Lights Blvd, Anchorage, Alaska 99503</li>
+        <li><strong>Phone:</strong> +1 (800) 545-2020</li>
+        <li><strong>Email:</strong> cookies@healthyorganicrecipevibes.com</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer role="contentinfo">
+    <div class="contact-info" aria-label="Contact information with address and phone number">
+      <div><span class="material-icons" aria-hidden="true">location_on</span>711 E Northern Lights Blvd, Anchorage, Alaska 99503</div>
+      <div><span class="material-icons" aria-hidden="true">phone</span>+1 (800) 545-2020</div>
+    </div>
+    <div>© 2024 Healthy &amp; Organic Recipe Vibes. All rights reserved.</div>
+  </footer>
+
+  <!-- Cookie Consent Dialog -->
+  <div id="cookie-consent" role="dialog" aria-live="polite" aria-label="Cookie consent dialog" aria-modal="true" aria-describedby="cookie-consent-message" hidden>
+    <p id="cookie-consent-message">We use cookies to improve your experience, personalize content, and analyze our traffic. You can choose to accept or decline non-essential cookies. Essential cookies are necessary for website functionality.</p>
+    <div class="buttons">
+      <button id="accept-cookies" type="button" aria-label="Accept cookies">Accept</button>
+      <button id="decline-cookies" type="button" aria-label="Decline cookies">Decline</button>
+    </div>
+  </div>
+
+  <script>
+    (function(){
+      const consentKey = 'cookieConsent';
+      const cookieConsentDiv = document.getElementById('cookie-consent');
+      const acceptBtn = document.getElementById('accept-cookies');
+      const declineBtn = document.getElementById('decline-cookies');
+
+      function setCookieConsent(value) {
+        localStorage.setItem(consentKey, value);
+      }
+      function getCookieConsent() {
+        return localStorage.getItem(consentKey);
+      }
+
+      function showConsentDialog() {
+        cookieConsentDiv.hidden = false;
+        cookieConsentDiv.focus();
+      }
+      function hideConsentDialog() {
+        cookieConsentDiv.hidden = true;
+      }
+
+      // Initialize
+      const consent = getCookieConsent();
+      if (!consent) {
+        showConsentDialog();
+      }
+
+      acceptBtn.addEventListener('click', () => {
+        setCookieConsent('accepted');
+        hideConsentDialog();
+      });
+
+      declineBtn.addEventListener('click', () => {
+        setCookieConsent('declined');
+        hideConsentDialog();
+      });
+    })();
+  </script>
+</body>
+</html>
+
