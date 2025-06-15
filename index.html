@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Healthy &amp; Organic Recipe Vibes</title>
+  <title>Healthy &amp; Organic Recipe Vibes - Home</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
   <style>
@@ -37,7 +37,7 @@
     }
     h2 {
       font-size: 2.4rem;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.75rem;
       margin-top: 2.5rem;
     }
     h3 {
@@ -55,12 +55,39 @@
     }
     a {
       color: #8b5e3c;
-      text-decoration: underline;
-      transition: color 0.3s ease;
+      text-decoration: none;
+      border-bottom: 1.5px solid transparent;
+      transition: border-color 0.25s ease;
     }
     a:hover,
     a:focus {
+      border-color: #ab784e;
+      outline: none;
+    }
+    nav {
+      background: #efe5d6;
+      box-shadow: 0 2px 6px rgba(106,83,59, 0.15);
+      padding: 0.8rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 2000;
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      font-weight: 600;
+      font-size: 1rem;
+      user-select: none;
+    }
+    nav a {
+      color: #6a533b;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      padding: 0.6rem 0.8rem;
+    }
+    nav a:hover,
+    nav a:focus {
       color: #ab784e;
+      border-bottom: 2.5px solid #ab784e;
       outline: none;
     }
     img {
@@ -84,9 +111,8 @@
       text-align: center;
       padding: 2.5rem 1rem 3rem;
       box-shadow: 0 2px 6px rgba(106,83,59, 0.15);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
+      position: relative;
+      z-index: 1500;
     }
     header h1 {
       font-family: 'Poppins', sans-serif;
@@ -95,56 +121,122 @@
       text-transform: uppercase;
       letter-spacing: 3px;
     }
-    /* Intro Section */
-    .intro {
-      margin-bottom: 3rem;
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, #dcc7a1 0%, #a7854d 100%);
+      color: #3b2f1e;
+      padding: 7rem 1rem 6rem;
       text-align: center;
-      max-width: 700px;
+      border-radius: 0 0 60% 60% / 20% 20% 80% 80%;
+      box-shadow: inset 0 0 100px rgba(255,255,255,0.2);
+      margin-bottom: 3rem;
+    }
+    .hero h2 {
+      font-size: 3.2rem;
+      margin-bottom: 1rem;
+      max-width: 650px;
       margin-left: auto;
       margin-right: auto;
     }
-    .intro p {
-      font-size: 1.125rem;
-      color: #6b5842;
+    .hero p {
+      font-size: 1.3rem;
+      color: #4a3921;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.5;
     }
-    /* Section styling */
+    /* Sections */
     section {
-      margin-bottom: 4rem;
+      margin-bottom: 3.5rem;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
     }
-    /* Recipe Card */
-    .recipe-card {
-      background: #f7f0e4;
-      border-radius: 14px;
-      box-shadow: 0 8px 20px rgba(139, 92, 54, 0.15);
-      padding: 1.8rem 2rem;
-      margin-bottom: 2.8rem;
+    /* Feature cards */
+    .features {
       display: grid;
-      grid-template-columns: 1fr 2fr;
-      gap: 2rem;
+      grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+      gap: 2.5rem;
+      margin-top: 2rem;
+    }
+    .feature-card {
+      background: #f7f0e4;
+      border-radius: 16px;
+      padding: 2rem 1.6rem;
+      box-shadow: 0 10px 22px rgba(139, 92, 54, 0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
       align-items: center;
     }
-    .recipe-card img {
-      border-radius: 16px;
-      box-shadow: 0 10px 25px rgba(139, 92, 54, 0.12);
+    .feature-card:hover,
+    .feature-card:focus-within {
+      transform: translateY(-8px);
+      box-shadow: 0 18px 40px rgba(139, 92, 54, 0.25);
+      outline: none;
     }
-    .recipe-content p {
-      font-size: 1rem;
-      color: #5b4f3c;
+    .feature-card img {
+      border-radius: 14px;
+      margin-bottom: 1.2rem;
+      max-height: 180px;
+      object-fit: cover;
+      width: 100%;
     }
-    .recipe-content h3 {
-      font-size: 1.8rem;
-      margin-bottom: 0.8rem;
+    .feature-card h3 {
       color: #7d5a29;
+      margin-bottom: 1rem;
+      font-size: 1.4rem;
+      text-align: center;
     }
-    /* List styling */
-    ul {
-      padding-left: 1.5rem;
-      color: #6b5842;
+    .feature-card p {
+      color: #5b4f3c;
+      line-height: 1.4;
+      text-align: center;
+    }
+    /* Call to action */
+    .cta {
+      background: #a89572;
+      color: #fff9ed;
+      border-radius: 24px;
+      text-align: center;
+      padding: 3rem 2rem;
+      box-shadow: 0 12px 30px rgba(167, 128, 57, 0.5);
+    }
+    .cta h2 {
+      font-size: 2.8rem;
       margin-bottom: 1rem;
     }
-    ul li {
-      margin-bottom: 0.5rem;
-      line-height: 1.4;
+    .cta p {
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      line-height: 1.5;
+    }
+    .btn-primary {
+      background: transparent;
+      border: 3px solid #fff9ed;
+      color: #fff9ed;
+      font-weight: 700;
+      padding: 14px 44px;
+      border-radius: 28px;
+      cursor: pointer;
+      font-size: 1.1rem;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 1.3px;
+      text-decoration: none;
+      display: inline-block;
+      line-height: 1;
+      user-select: none;
+    }
+    .btn-primary:hover,
+    .btn-primary:focus {
+      background-color: #fff9ed;
+      color: #a89572;
+      outline: none;
     }
     /* Footer */
     footer {
@@ -173,28 +265,17 @@
       font-size: 20px;
       color: #a37d43;
     }
-    /* Disclaimer */
-    .disclaimer {
-      background: #faf6f0;
-      border: 1px solid #e2d9c5;
-      padding: 2rem 2.5rem;
-      border-radius: 14px;
-      color: #8a7760;
-      font-size: 0.9rem;
-      line-height: 1.6;
-      max-width: 900px;
-      margin: 0 auto 5rem;
-      box-shadow: 0 6px 18px rgba(139,92,54,0.1);
-    }
     /* Responsive */
     @media (max-width: 900px) {
-      .recipe-card {
+      .features {
         grid-template-columns: 1fr;
       }
-      .recipe-card img {
-        margin-bottom: 1.5rem;
-        max-height: 320px;
-        object-fit: cover;
+      .container {
+        width: 95%;
+      }
+      nav {
+        gap: 1.5rem;
+        font-size: 0.9rem;
       }
     }
     @media (max-width: 480px) {
@@ -208,7 +289,7 @@
         font-size: 1.8rem;
       }
       h3 {
-        font-size: 1.4rem;
+        font-size: 1.3rem;
       }
       .material-icons {
         font-size: 18px;
@@ -216,6 +297,11 @@
       footer .contact-info {
         flex-direction: column;
         gap: 1rem;
+      }
+      nav {
+        font-size: 0.85rem;
+        flex-wrap: wrap;
+        justify-content: center;
       }
     }
   </style>
@@ -225,233 +311,74 @@
     <h1>Healthy &amp; Organic Recipe Vibes</h1>
   </header>
 
+  <nav role="navigation" aria-label="Primary navigation">
+    <a href="index.html">Home</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms &amp; Conditions</a>
+    <a href="cookies.html">Cookies Policy</a>
+    <a href="contact.html">Contact Us</a>
+  </nav>
+
   <main class="container" role="main">
-    <section class="intro" aria-label="Introduction to Healthy and Organic Recipe Vibes">
-      <p>Welcome to your go-to destination for rustic and homely culinary delights. Dive into the world of healthy and organic cooking with recipes and tips that inspire wholesome living and nourish your body with nature’s best ingredients. From farm-fresh produce to traditional wholesome dishes, explore a lifestyle rich in flavor, nutrition, and comfort.</p>
+    <section class="hero" aria-label="Welcome hero section">
+      <h2>Embrace Rustic, Homely Flavors with Healthy &amp; Organic Recipes</h2>
+      <p>Discover the joy of cooking with pure, organic ingredients inspired by nature’s bounty and the comforts of home. Our blog offers you curated recipes, lifestyle tips, and nourishing ideas designed to bring rustic charm to your dining table every day.</p>
     </section>
 
-    <!-- Recipe Section 1 -->
-    <section aria-labelledby="section1-title">
-      <h2 id="section1-title">Hearty Organic Breakfast Ideas</h2>
+    <section aria-labelledby="featured-title" tabindex="0">
+      <h2 id="featured-title">Featured Recipes to Savor</h2>
+      <div class="features">
+        <article class="feature-card" tabindex="0" aria-label="Rustic Garden Vegetable Soup Recipe">
+          <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/899d3a4b-dd3e-44b0-8f6d-7706215663fb.png" alt="Bowl of rustic garden vegetable soup with fresh herbs and crusty bread on wood table" />
+          <h3>Rustic Garden Vegetable Soup</h3>
+          <p>A wholesome blend of fresh, organic vegetables simmered to comforting perfection. Perfect for chilly days when you want warm nourishment filled with earthy flavors.</p>
+        </article>
 
-      <article class="recipe-card" aria-label="Organic Oatmeal with Fresh Berries Recipe">
-        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/2a51d420-8df5-4612-9b1b-8290bbd15424.png" alt="Bowl of organic oatmeal topped with fresh mixed berries and nuts in a rustic ceramic bowl on a wooden table" />
-        <div class="recipe-content">
-          <h3>Organic Oatmeal with Fresh Berries</h3>
-          <p>Start your day with a nourishing bowl of organic oatmeal topped with juicy fresh berries and crunchy nuts. This breakfast is packed with fiber, antioxidants, and essential nutrients that provide long-lasting energy and support digestive health.</p>
-          <h4>Ingredients:</h4>
-          <ul>
-            <li>1 cup organic rolled oats</li>
-            <li>2 cups almond milk or water</li>
-            <li>Handful of fresh mixed berries (blueberries, raspberries, strawberries)</li>
-            <li>1 tablespoon chopped walnuts</li>
-            <li>1 teaspoon organic honey or maple syrup (optional)</li>
-            <li>Pinch of cinnamon</li>
-          </ul>
-          <h4>Instructions:</h4>
-          <ul>
-            <li>Bring almond milk to a gentle boil in a saucepan.</li>
-            <li>Add oats and reduce to low heat. Cook for 5-7 minutes, stirring occasionally.</li>
-            <li>Remove from heat. Stir in cinnamon and honey/maple syrup if desired.</li>
-            <li>Serve topped with fresh berries and walnuts for a delightful crunch.</li>
-          </ul>
-          <p>This oatmeal recipe delivers a perfect balance of wholesome flavors and a rustic cozy vibe, ideal for a homely morning meal.</p>
-        </div>
-      </article>
+        <article class="feature-card" tabindex="0" aria-label="Homemade Whole Wheat Bread Recipe">
+          <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/26f12fa7-8880-410d-b240-9fed10ad410b.png" alt="Loaf of homemade whole wheat bread with crunchy crust sliced on rustic board" />
+          <h3>Homemade Whole Wheat Bread</h3>
+          <p>Experience the warmth of freshly baked bread made from whole wheat flour, filling your home with inviting aromas and authentic rustic taste.</p>
+        </article>
 
-      <article class="recipe-card" aria-label="Avocado Toast with Organic Whole Grain Bread Recipe">
-        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/781543df-a477-4984-a035-4c1ab3f234da.png" alt="Sliced vegan avocado spread on toasted organic whole grain bread topped with cherry tomatoes and fresh herbs on a rustic wooden board" />
-        <div class="recipe-content">
-          <h3>Avocado Toast with Organic Whole Grain Bread</h3>
-          <p>A simple yet elegant recipe that combines creamy avocado with the hearty texture of organic whole grain bread. Add a touch of lemon juice and chili flakes for a refreshing and invigorating flavor profile.</p>
-          <h4>Ingredients:</h4>
-          <ul>
-            <li>2 slices organic whole grain bread</li>
-            <li>1 ripe organic avocado</li>
-            <li>Juice of half a lemon</li>
-            <li>Salt and pepper to taste</li>
-            <li>Dash of chili flakes (optional)</li>
-            <li>Cherry tomatoes and fresh basil leaves for garnish</li>
-          </ul>
-          <h4>Instructions:</h4>
-          <ul>
-            <li>Toast the bread slices to golden brown.</li>
-            <li>Mash avocado with lemon juice, salt, and pepper until smooth.</li>
-            <li>Spread avocado mash generously on toast.</li>
-            <li>Sprinkle chili flakes, top with halved cherry tomatoes and basil leaves.</li>
-            <li>Serve immediately for a fresh and tasty start to your day.</li>
-          </ul>
-          <p>This toast blends rustic textures with vibrant, organic ingredients for a homely and energizing breakfast experience.</p>
-        </div>
-      </article>
-      
-      <p>Breakfast is the most important meal, and embracing organic, wholesome ingredients helps fuel your day with nutrients and vitality. These recipes reflect simplicity fused with nutrition, perfect for anyone seeking a balanced lifestyle.</p>
+        <article class="feature-card" tabindex="0" aria-label="Organic Honey and Lemon Tea Recipe">
+          <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/399e6856-c897-4dad-9184-d4c78b70115a.png" alt="Steaming cup of organic honey and lemon tea with slice of lemon on side" />
+          <h3>Organic Honey and Lemon Tea</h3>
+          <p>A soothing beverage crafted with natural honey and fresh lemon, perfect for calming the senses and promoting wellness through simple, homely ingredients.</p>
+        </article>
+      </div>
     </section>
 
-    <!-- Recipe Section 2 -->
-    <section aria-labelledby="section2-title">
-      <h2 id="section2-title">Rustic Homestyle Lunch Recipes</h2>
-
-      <article class="recipe-card" aria-label="Hearty Vegetable and Quinoa Salad Recipe">
-        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/a3a55932-9d7f-4803-a4cf-0eff1759376a.png" alt="Colorful vegetable and quinoa salad with cherry tomatoes, cucumbers, chickpeas and fresh herbs in a rustic ceramic bowl on linen cloth" />
-        <div class="recipe-content">
-          <h3>Hearty Vegetable and Quinoa Salad</h3>
-          <p>A vibrant and filling salad packed with fresh garden vegetables and protein-rich quinoa. Perfect for a healthy lunch that keeps you energized and satisfied without feeling heavy.</p>
-          <h4>Ingredients:</h4>
-          <ul>
-            <li>1 cup cooked organic quinoa</li>
-            <li>1 cup cherry tomatoes, halved</li>
-            <li>1 cup cucumbers, diced</li>
-            <li>1/2 cup cooked chickpeas</li>
-            <li>1/4 cup red onion, finely chopped</li>
-            <li>2 tablespoons fresh parsley, chopped</li>
-            <li>Juice of one organic lemon</li>
-            <li>3 tablespoons extra virgin olive oil</li>
-            <li>Salt and pepper to taste</li>
-          </ul>
-          <h4>Instructions:</h4>
-          <ul>
-            <li>Combine quinoa, tomatoes, cucumbers, chickpeas, onion, and parsley in a large bowl.</li>
-            <li>In a small bowl, whisk together lemon juice, olive oil, salt, and pepper.</li>
-            <li>Pour dressing over the salad and toss gently to coat.</li>
-            <li>Let sit for 10 minutes before serving to allow flavors to meld beautifully.</li>
-          </ul>
-          <p>This rustic salad offers a balanced blend of nutrition, flavor, and texture for a wholesome midday meal.</p>
-        </div>
-      </article>
-
-      <article class="recipe-card" aria-label="Slow-Cooked Organic Lentil Stew Recipe">
-        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/a53c62ac-f80a-4726-a120-159b2ddc5859.png" alt="Hearty slow-cooked organic lentil stew in a rustic black cast iron pot garnished with fresh herbs and a side of rustic bread" />
-        <div class="recipe-content">
-          <h3>Slow-Cooked Organic Lentil Stew</h3>
-          <p>A warming, nutrient-dense stew perfect for cozy afternoons. Packed with organic lentils, fresh vegetables, and herbs, this recipe channels the comforting essence of rustic homestyle cooking.</p>
-          <h4>Ingredients:</h4>
-          <ul>
-            <li>1 cup organic green lentils, rinsed</li>
-            <li>2 medium carrots, diced</li>
-            <li>1 celery stalk, diced</li>
-            <li>1 small onion, finely chopped</li>
-            <li>3 cloves garlic, minced</li>
-            <li>1 can diced organic tomatoes (14 oz)</li>
-            <li>4 cups organic vegetable broth</li>
-            <li>2 tablespoons olive oil</li>
-            <li>1 teaspoon dried thyme</li>
-            <li>Salt and black pepper to taste</li>
-          </ul>
-          <h4>Instructions:</h4>
-          <ul>
-            <li>Heat olive oil in a large pot over medium heat and sauté onion, carrot, and celery until softened.</li>
-            <li>Add garlic and thyme; cook for another minute until fragrant.</li>
-            <li>Add lentils, diced tomatoes, and vegetable broth. Bring to a boil.</li>
-            <li>Reduce heat to low and simmer for 35-40 minutes or until lentils are tender.</li>
-            <li>Season with salt and pepper, stir well, and serve hot with rustic bread.</li>
-          </ul>
-          <p>This stew captures the heart of organic home cooking with rich, earthy flavors and wholesome ingredients.</p>
-        </div>
-      </article>
-
-      <p>A rustic lunch nourishes body and soul. These recipes celebrate organic ingredients cooked slowly and simply to bring out the most authentic flavors and textures for a homely meal.</p>
+    <section aria-labelledby="our-philosophy-title" tabindex="0">
+      <h2 id="our-philosophy-title">Our Philosophy: Nourishing Body and Soul</h2>
+      <p>At <strong>Healthy &amp; Organic Recipe Vibes</strong>, we believe that food is more than just sustenance. It’s a source of comfort, heritage, and connection to the earth. We celebrate the rustic traditions of homely cooking by encouraging the use of organic, fresh ingredients that promote vibrant health.</p>
+      <p>Cooking with respect for natural rhythms, seasonality, and sustainable practices nurtures more than your body — it nurtures your spirit and supports a balanced, joyful lifestyle. Each recipe we share carries the values of authenticity, wholesomeness, and simplicity, crafted to bring you closer to nature’s gifts.</p>
+      <p>Our dedicated blog explores ways to integrate these principles into your daily routine, helping you cultivate mindful eating, wholesome cooking, and a deep appreciation for the flavors and health benefits of organic produce.</p>
     </section>
 
-    <!-- Recipe Section 3 -->
-    <section aria-labelledby="section3-title">
-      <h2 id="section3-title">Wholesome Dinner Inspirations</h2>
-
-      <article class="recipe-card" aria-label="Roasted Root Vegetables with Herbs Recipe">
-        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/139aee35-0278-4f71-a999-b19fae34f78d.png" alt="Assortment of roasted root vegetables including carrots, parsnips, and potatoes with fresh rosemary on rustic baking tray" />
-        <div class="recipe-content">
-          <h3>Roasted Root Vegetables with Herbs</h3>
-          <p>Roasting brings out the natural sweetness in fresh root vegetables, enhanced with fragrant herbs. This dish is a perfect rustic side or main course full of wholesome goodness.</p>
-          <h4>Ingredients:</h4>
-          <ul>
-            <li>3 carrots, peeled and chopped</li>
-            <li>2 parsnips, peeled and chopped</li>
-            <li>3 medium potatoes, quartered</li>
-            <li>3 tablespoons olive oil</li>
-            <li>2 teaspoons fresh rosemary, chopped</li>
-            <li>Salt and pepper to taste</li>
-          </ul>
-          <h4>Instructions:</h4>
-          <ul>
-            <li>Preheat oven to 425°F (220°C).</li>
-            <li>Toss vegetables in olive oil, rosemary, salt, and pepper.</li>
-            <li>Spread evenly on a baking sheet and roast for 35-40 minutes until tender and golden.</li>
-            <li>Serve hot as a hearty complement to any main course.</li>
-          </ul>
-          <p>This recipe brings rustic charm and earthy flavors to your dinner table, perfect for relaxing evenings at home.</p>
-        </div>
-      </article>
-
-      <article class="recipe-card" aria-label="Baked Organic Salmon with Lemon and Dill Recipe">
-        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/1acf8666-7ff4-4ae7-b510-e3379e201bce.png" alt="Oven-baked organic salmon fillet garnished with lemon slices and dill sprigs on a rustic wooden board" />
-        <div class="recipe-content">
-          <h3>Baked Organic Salmon with Lemon and Dill</h3>
-          <p>This healthy and delicious salmon recipe uses fresh organic ingredients and a simple preparation to highlight natural flavors. Rich in omega-3s and perfect for a nutritious dinner.</p>
-          <h4>Ingredients:</h4>
-          <ul>
-            <li>2 organic salmon fillets</li>
-            <li>1 lemon, thinly sliced</li>
-            <li>2 tablespoons fresh dill, chopped</li>
-            <li>Salt and pepper to taste</li>
-            <li>1 tablespoon olive oil</li>
-          </ul>
-          <h4>Instructions:</h4>
-          <ul>
-            <li>Preheat oven to 400°F (200°C).</li>
-            <li>Place salmon on a baking dish, drizzle with olive oil, and season with salt and pepper.</li>
-            <li>Top with lemon slices and sprinkle dill over the fillets.</li>
-            <li>Bake for 12-15 minutes or until salmon is cooked through and flakes easily.</li>
-            <li>Serve with steamed greens or rustic bread for a complete meal.</li>
-          </ul>
-          <p>A rustic yet refined dish that embraces organic living with fresh, wholesome ingredients and simple yet flavorful preparations.</p>
-        </div>
-      </article>
-
-      <p>Dinner is the perfect time to unwind and enjoy recipes that nourish the body with natural, organic foods cooked in simple yet delicious ways. Our dinner inspirations blend rustic homeliness with modern health awareness.</p>
+    <section aria-labelledby="community-title" tabindex="0">
+      <h2 id="community-title">Join a Community of Organic Food Lovers</h2>
+      <p>Become part of a thriving community passionate about healthy living through natural foods. Engage with like-minded individuals who share recipes, tips, and inspiring stories about the joys and benefits of organic cooking and rustic homestyle traditions.</p>
+      <p>Discover seasonal highlights, ingredient spotlights, and wellness guides that empower you to make confident choices. Our newsletter offers exclusive content, new recipe releases, and invites to special events designed to foster learning and celebration of organic lifestyles.</p>
+      <p>Together, we foster a welcoming environment encouraging sustainable living, connection, and joyful eating. Sharing food is sharing life; join us on this wholesome journey.</p>
+      <a href="privacy.html" class="btn-primary" aria-label="Read our Privacy Policy">Learn About Our Privacy Practices</a>
     </section>
 
-    <!-- Additional content for 3000-4000 words purpose -->
-    <section aria-labelledby="section4-title">
-      <h2 id="section4-title">Tips for Maintaining a Healthy Organic Lifestyle</h2>
-      <p>Living a healthy and organic lifestyle is more than just food choices; it embraces a holistic approach that nourishes the mind, body, and soul. Here are some essential tips to help you maintain this wholesome way of life:</p>
-      <ul>
-        <li><strong>Prioritize seasonal &amp; local produce:</strong> Buying fruits and vegetables in season and from local sources ensures freshness, reduces environmental impact, and supports local farmers.</li>
-        <li><strong>Choose whole foods over processed:</strong> Whole grains, legumes, nuts, and fresh produce provide balanced nutrition and natural energy compared to processed options.</li>
-        <li><strong>Practice mindful eating:</strong> Slow down and savor each bite. Appreciation of food leads to better digestion and satisfaction.</li>
-        <li><strong>Stay hydrated naturally:</strong> Drink plenty of water throughout the day and include herbal teas that have detoxifying and calming properties.</li>
-        <li><strong>Incorporate natural herbs and spices:</strong> Use turmeric, ginger, cinnamon and other spices to enhance flavor and provide additional health benefits.</li>
-        <li><strong>Cook at home often:</strong> Preparing meals allows control over ingredients and builds a connection with your food’s origins.</li>
-        <li><strong>Connect with nature:</strong> Engage in outdoor activities, gardening, or even small walks to boost mood and mental clarity.</li>
-        <li><strong>Avoid artificial additives:</strong> Read labels carefully and avoid food with preservatives, artificial colors, or excessive sugar.</li>
-      </ul>
-      <p>These actionable tips help embed organic and healthy habits into everyday routines, fostering rich and vibrant health harmoniously aligned with nature.</p>
-    </section>
-
-    <section aria-labelledby="section5-title">
-      <h2 id="section5-title">The Benefits of Cooking with Organic Ingredients</h2>
-      <p>Organic ingredients offer more than just flavor — they significantly contribute to overall health and environmental sustainability. Here are some compelling benefits:</p>
-      <ul>
-        <li><strong>Higher nutrient content:</strong> Organic fruits and vegetables often contain higher concentrations of certain nutrients like antioxidants, vitamins, and minerals.</li>
-        <li><strong>Fewer pesticides and chemicals:</strong> Organic farming avoids synthetic pesticides, minimizing harmful exposure to toxins linked to health issues.</li>
-        <li><strong>Better taste and freshness:</strong> Organic produce tends to have richer flavors due to natural growing practices and soil health maintenance.</li>
-        <li><strong>Supports biodiversity:</strong> Organic farms encourage a healthier environment by promoting soil fertility and reducing pollution.</li>
-        <li><strong>Improved animal welfare:</strong> Organic animal products come from animals raised with access to open spaces and natural diets.</li>
-        <li><strong>Reduces antibiotic resistance:</strong> Less reliance on antibiotics in organic farms helps slow resistance issues in humans.</li>
-      </ul>
-      <p>Embracing organic cooking is a decision that benefits personal wellness and contributes positively to the planet’s health, creating a sustainable future.</p>
-    </section>
-
-    <section aria-label="Disclaimer Section" class="disclaimer" tabindex="0">
-      <h2>Disclaimer</h2>
-      <p>The information provided on this website is for educational and informational purposes only. While every effort has been made to ensure the accuracy and completeness of the information, the content is not intended as medical advice and does not substitute for professional consultation or treatment. Readers should consult healthcare professionals or qualified nutritionists to tailor dietary choices to individual health conditions and needs.</p>
-      <p>Recipes and health tips shared here are based on traditional and contemporary organic practices and personal experiences. Individual results may vary based on many factors such as age, activity level, medical history, and allergies. This website and its creators disclaim any liability for any adverse effects or consequences arising from the use of the information provided.</p>
-      <p>Additionally, while efforts are made to source environmentally safe and certified organic ingredients, availability may vary by region, and certification standards differ worldwide. Users are encouraged to research and verify the sources of their food and products to ensure alignment with personal values and health requirements.</p>
-      <p>We encourage a balanced approach, promoting sustainability, health consciousness, and enjoyment of food. Any opinions expressed here are those of the authors and not endorsed by any certifying bodies or organizations. Always practice safe cooking methods to avoid foodborne illness and observe proper hygiene and storage practices.</p>
-      <p>By accessing and using this website, users agree to hold harmless the website creators, authors, and contributors from any claims, damages, or losses resulting from the use of the information shared herein. Your engagement implies agreement with these terms and understanding of the content’s educational nature.</p>
+    <section aria-labelledby="final-thoughts-title" tabindex="0">
+      <h2 id="final-thoughts-title">Start Your Organic Culinary Journey Today</h2>
+      <p>Whether you are a beginner or a seasoned cook, our blog offers practical, delicious ways to infuse your meals with organic goodness and rustic charm. Every recipe and article is designed to guide you in embracing a lifestyle that honours your health and the environment.</p>
+      <p>From hearty breakfasts to comforting dinners, from soothing drinks to nourishing sides — find inspiration that fits your rhythm and taste. Explore cooking techniques, ingredient substitutions, and kitchen tips that make healthy eating accessible and enjoyable.</p>
+      <p>Join us as we celebrate this vibrant way of life, one recipe, one meal, and one joyful bite at a time.</p>
     </section>
   </main>
 
   <footer role="contentinfo">
+    <nav aria-label="Footer navigation" style="margin-bottom: 1rem;">
+      <a href="index.html" style="margin-right: 20px; color: #6a533b; text-decoration: none;">Home</a>
+      <a href="privacy.html" style="margin-right: 20px; color: #6a533b; text-decoration: none;">Privacy Policy</a>
+      <a href="terms.html" style="margin-right: 20px; color: #6a533b; text-decoration: none;">Terms &amp; Conditions</a>
+      <a href="cookies.html" style="margin-right: 20px; color: #6a533b; text-decoration: none;">Cookies Policy</a>
+      <a href="contact.html" style="color: #6a533b; text-decoration: none;">Contact Us</a>
+    </nav>
     <div class="contact-info" aria-label="Contact information with address and phone number">
       <div><span class="material-icons" aria-hidden="true">location_on</span>711 E Northern Lights Blvd, Anchorage, Alaska 99503</div>
       <div><span class="material-icons" aria-hidden="true">phone</span>+1 (800) 545-2020</div>
